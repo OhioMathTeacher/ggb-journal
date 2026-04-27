@@ -3,29 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archives — North American GeoGebra Journal</title>
+  <title>Contact — North American GeoGebra Journal</title>
     <style>
-    .search-row {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .search-row input {
-      flex: 1; min-width: 220px;
-      padding: 0.55rem 0.85rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      border: 1.5px solid var(--gray-200);
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
       border-radius: 6px;
-      outline: none;
-      color: var(--ink);
-      background: #fff;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      padding: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
-    .search-row input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,176,0.1); }
-    .result-count { font-size: 0.8rem; color: var(--gray-400); white-space: nowrap; }
+    .contact-form .form-group { margin-bottom: 1.1rem; }
+    .success-msg {
+      display: none;
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 0 4px 4px 0;
+      padding: 1rem 1.25rem;
+      color: #14532d;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -609,19 +606,86 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 <div class="page-container">
   <div class="two-col">
     <main>
-      <span class="eyebrow">Complete Publication Record</span>
-      <h1 class="page-title">Archives</h1>
-      <p class="page-lead" id="archive-lead"></p>
+      <span class="eyebrow">Get in Touch</span>
+      <h1 class="page-title">Contact</h1>
+      <p class="page-lead">
+        Questions about submissions, the review process, or the journal?
+        Use the form below and the editor will get back to you.
+      </p>
 
-      <div class="search-row">
-        <input type="text" id="q" placeholder="Search by title, author…" autocomplete="off" />
-        <span class="result-count" id="rc"></span>
+      <div class="contact-form">
+        <!--
+          FORMSPREE SETUP (James does this once):
+          1. Go to formspree.io and create a free account
+          2. Click "New Form", name it "NAGJ Contact"
+          3. Copy the form endpoint — looks like:
+             https://formspree.io/f/abcdefgh
+          4. Replace "YOUR_FORMSPREE_ID" below with that endpoint
+          5. Commit the change — done. Submissions go to James's email.
+        -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+
+          <div class="form-group">
+            <label for="name">Your Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="First Last" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@institution.edu" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject <span class="req">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="">— Select one —</option>
+              <option value="Manuscript submission question">Manuscript submission question</option>
+              <option value="Review process question">Review process question</option>
+              <option value="Question about a published article">Question about a published article</option>
+              <option value="Reviewer interest">I'd like to join the reviewer pool</option>
+              <option value="Technical issue with the site">Technical issue with the site</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" required rows="6"
+              placeholder="Please describe your question or inquiry…"></textarea>
+          </div>
+
+          <!-- Honeypot spam field — hidden from humans, bots fill it in -->
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <!-- Formspree: don't redirect, handle with JS instead -->
+          <input type="hidden" name="_subject" value="NAGJ Contact Form Submission" />
+
+          <button type="submit" class="submit-btn">Send Message</button>
+
+          <div class="success-msg" id="success-msg">
+            ✓ Message sent! The editor will get back to you soon.
+          </div>
+
+        </form>
       </div>
 
-      <div id="archive-body"></div>
     </main>
 
-    <aside class="sidebar" id="sidebar"></aside>
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-title">Quick Links</div>
+        <ul>
+          <li><a href="submit.html">Author Guidelines</a></li>
+          <li><a href="archives.html">Browse Archives</a></li>
+          <li><a href="team.html">Editorial Team</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Submissions</div>
+        <p>To submit a manuscript, please read the author guidelines first, then use this contact form or attach your manuscript directly.</p>
+        <a href="submit.html" class="btn primary">Author Guidelines</a>
+      </div>
+    </aside>
   </div>
 </div>
 
@@ -630,78 +694,38 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 <script src="articles.js"></script>
 <script src="shared.js"></script>
 <script>
-  document.getElementById('hdr').innerHTML = renderHeader('archives');
+  document.getElementById('hdr').innerHTML = renderHeader('contact');
   document.getElementById('ftr').innerHTML = renderFooter();
 
-  const j = NAGJ_DATA.journal;
-  const total = NAGJ_DATA.issues.reduce((s, i) => s + i.articles.length, 0);
+  // Handle form submission with fetch so user stays on the page
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
 
-  document.getElementById('archive-lead').textContent =
-    `${total} articles across ${NAGJ_DATA.issues.length} issues, 2012–present. PDFs currently link to the legacy OJS server; local copies are added as files are uploaded.`;
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
 
-  // Build sidebar
-  const localCount = NAGJ_DATA.issues.reduce((s,i) => s + i.articles.filter(a=>a.localPdf).length, 0);
-  document.getElementById('sidebar').innerHTML = `
-    <div class="card">
-      <div class="card-title">Quick Stats</div>
-      <div class="stat-row">
-        <div class="stat-box"><span class="stat-val">${NAGJ_DATA.issues.length}</span><span class="stat-lbl">Issues</span></div>
-        <div class="stat-box"><span class="stat-val">${total}</span><span class="stat-lbl">Articles</span></div>
-        <div class="stat-box"><span class="stat-val">${localCount}</span><span class="stat-lbl">Local PDFs</span></div>
-        <div class="stat-box"><span class="stat-val">${j.founded}</span><span class="stat-lbl">Founded</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">Jump to Issue</div>
-      <ul>${NAGJ_DATA.issues.map(i =>
-        `<li><a href="#${i.id}">Vol. ${i.volume} No. ${i.number} (${i.year})</a></li>`
-      ).join('')}</ul>
-    </div>
-    <div class="card">
-      <div class="card-title">PDF Migration</div>
-      <p>${localCount} of ${total} articles have local PDFs. <a href="admin.html">Use the admin tool</a> to track and update.</p>
-      <a href="admin.html" class="btn primary">Open Admin ↗</a>
-    </div>`;
-
-  // Build archive
-  document.getElementById('archive-body').innerHTML = NAGJ_DATA.issues.map(issue => {
-    const tag = issue.isProceedings
-      ? `<span class="volume-tag proc">Proceedings</span>`
-      : `<span class="volume-tag">Vol. ${issue.volume} · No. ${issue.number}</span>`;
-    const fullIssue = issue.fullIssuePdf
-      ? `<p style="font-size:0.78rem; margin-bottom:0.5rem; color:var(--gray-400);">
-           Full issue: <a href="${issue.fullIssuePdf}" target="_blank">Download PDF ↗</a></p>`
-      : '';
-    const articles = issue.articles.map(renderArticleRow).join('');
-    return `
-<section class="volume-section" id="${issue.id}">
-  <div class="volume-heading">
-    ${tag}
-    <span class="volume-title-text">${issue.title}</span>
-    <span class="volume-year-tag">${issue.year}</span>
-  </div>
-  ${issue.subtitle && !issue.isProceedings ? `<p style="font-size:0.82rem;color:var(--gray-400);font-style:italic;margin-bottom:0.5rem;">${issue.subtitle}</p>` : ''}
-  ${fullIssue}
-  <ul class="article-list">${articles}</ul>
-</section>`;
-  }).join('');
-
-  document.getElementById('rc').textContent = `${total} articles`;
-
-  // Search
-  document.getElementById('q').addEventListener('input', function() {
-    const q = this.value.trim().toLowerCase();
-    let shown = 0;
-    document.querySelectorAll('.article-row').forEach(row => {
-      const match = !q || row.dataset.search.includes(q);
-      row.classList.toggle('hidden', !match);
-      if (match) shown++;
-    });
-    document.querySelectorAll('.volume-section').forEach(sec => {
-      const vis = sec.querySelectorAll('.article-row:not(.hidden)').length;
-      sec.classList.toggle('hidden', q && vis === 0);
-    });
-    document.getElementById('rc').textContent = q ? `${shown} result${shown !== 1 ? 's' : ''}` : `${total} articles`;
+      if (response.ok) {
+        form.reset();
+        document.getElementById('success-msg').style.display = 'block';
+        btn.textContent = 'Sent!';
+      } else {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
   });
 </script>
 </body>

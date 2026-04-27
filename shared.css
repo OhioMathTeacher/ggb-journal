@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════
    NAGJ — shared.css
    Design: Modern Academic / Editorial
-   Fonts: Lora (display) + DM Sans (UI/body)
+   Fonts: Fraunces (display) + DM Sans (UI/body)
 ═══════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--ink);
   background: var(--off-white);
@@ -91,7 +91,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
   font-weight: 500;
 }
 .journal-name {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: clamp(1.5rem, 3.5vw, 2.6rem);
   font-weight: 700;
   color: #fff;
@@ -170,7 +170,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 
 /* ── PAGE TITLES ── */
 .page-title {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 2rem;
   font-weight: 700;
   color: var(--navy);
@@ -208,17 +208,17 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 }
 .article-row:first-child { border-top: 1px solid var(--gray-100); }
 .article-title-link {
-  font-family: 'Lora', serif;
-  font-size: 1.05rem;
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--navy);
-  line-height: 1.4;
+  line-height: 1.35;
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 .article-title-link:hover { color: var(--blue); text-decoration: none; }
-.article-authors { font-size: 0.88rem; color: var(--gray-500); }
-.article-pages { font-size: 0.82rem; color: var(--gray-400); white-space: nowrap; }
+.article-authors { font-size: 0.78rem; color: var(--gray-500); }
+.article-pages { font-size: 0.75rem; color: var(--gray-400); white-space: nowrap; }
 .pill-links { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
 .pill {
   font-size: 0.68rem;
@@ -259,7 +259,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
   margin-bottom: 0.25rem;
 }
 .issue-title-display {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: #fff;
@@ -270,7 +270,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 .issue-published { font-size: 0.75rem; color: #64748b; margin-top: 0.4rem; }
 .issue-header-right { text-align: right; flex-shrink: 0; }
 .issue-article-count {
-  font-family: 'Lora', serif;
+  font-family: 'Fraunces', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--blue);
@@ -302,7 +302,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 }
 .volume-tag.proc { background: var(--teal); }
 .volume-title-text {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--navy);
@@ -336,7 +336,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
 
 .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
 .stat-box { background: var(--gray-50); border-radius: 4px; padding: 0.6rem 0.5rem; text-align: center; }
-.stat-val { display: block; font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+.stat-val { display: block; font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
 .stat-lbl { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
 
 .btn {
@@ -473,7 +473,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
   gap: 3rem;
 }
 .footer-name {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1rem;
   font-weight: 700;
   color: #e2e8f0;
@@ -521,14 +521,14 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--navy);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700;
+  font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700;
   color: #fff; flex-shrink: 0;
 }
 .editor-role-badge {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--blue); margin-bottom: 0.1rem;
 }
-.editor-full-name { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: var(--navy); }
+.editor-full-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--navy); }
 .editor-affiliation { font-size: 0.8rem; color: var(--gray-500); font-style: italic; margin-bottom: 0.3rem; }
 .editor-blurb { font-size: 0.83rem; color: var(--gray-500); }
 
@@ -541,7 +541,7 @@ a:hover { text-decoration: underline; color: var(--blue-hover); }
   border-bottom: 2px solid var(--gray-100);
 }
 .inv-table td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
-.inv-table td:first-child { font-family: 'Lora', serif; font-size: 0.9rem; color: var(--navy); }
+.inv-table td:first-child { font-family: 'Fraunces', serif; font-size: 0.9rem; color: var(--navy); }
 .progress-bar { height: 5px; background: var(--gray-100); border-radius: 3px; overflow: hidden; }
 .progress-fill { height: 100%; border-radius: 3px; background: var(--blue); transition: width 0.3s; }
 .progress-fill.done { background: var(--green); }

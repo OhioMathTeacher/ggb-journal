@@ -4,17 +4,18 @@ function renderHeader(activePage) {
   const j = NAGJ_DATA.journal;
   const cur = NAGJ_DATA.issues[0];
   const nav = [
-    { id: 'index',    label: 'Home',          href: 'index.html' },
+    { id: 'index',    label: 'Home',           href: 'index.html' },
     { id: 'archives', label: 'Archives',      href: 'archives.html' },
     { id: 'submit',   label: 'Submit',        href: 'submit.html' },
     { id: 'team',     label: 'Editorial Team',href: 'team.html' },
+    { id: 'contact',  label: 'Contact',       href: 'contact.html' },
     { id: 'admin',    label: 'Admin',         href: 'admin.html' },
   ].map(p => `<a href="${p.href}" class="${p.id === activePage ? 'active' : ''}">${p.label}</a>`).join('');
 
   return `
 <div class="topstrip">
   <span>Open Access &nbsp;·&nbsp; Peer Reviewed &nbsp;·&nbsp; No Submission Fees &nbsp;·&nbsp; ISSN ${j.issn}</span>
-  <a href="mailto:${j.editorEmail}">✉ ${j.editorEmail}</a>
+  <a href="contact.html">✉ Contact the Editor</a>
 </div>
 <header class="site-header">
   <div class="header-inner">
@@ -54,13 +55,14 @@ function renderFooter() {
         <li><a href="archives.html">Archives</a></li>
         <li><a href="submit.html">Submit a Manuscript</a></li>
         <li><a href="team.html">Editorial Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="admin.html">Admin</a></li>
       </ul>
     </div>
     <div>
       <p class="footer-heading">Contact</p>
       <ul>
-        <li><a href="mailto:${j.editorEmail}">${j.editorEmail}</a></li>
+        <li><a href="contact.html">Contact the Editor</a></li>
         <li><a href="${j.legacyUrl}" target="_blank">Legacy OJS Site ↗</a></li>
         <li><a href="https://pages.github.com" target="_blank">Hosted on GitHub Pages</a></li>
       </ul>
