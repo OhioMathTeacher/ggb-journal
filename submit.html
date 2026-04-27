@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit — North American GeoGebra Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+/* ═══════════════════════════════════════════
+   NAGJ — shared.css
+   Design: Modern Academic / Editorial
+   Fonts: Fraunces (display) + DM Sans (UI/body)
+═══════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #0f1f3d;
+  --navy-mid:   #1e3a6e;
+  --blue:       #2563b0;
+  --blue-hover: #1a4a8a;
+  --blue-light: #dbeafe;
+  --teal:       #0d7377;
+  --teal-light: #d0f0f2;
+  --amber:      #b45309;
+  --amber-light:#fef3c7;
+  --red:        #991b1b;
+  --white:      #ffffff;
+  --off-white:  #f8fafc;
+  --gray-50:    #f1f5f9;
+  --gray-100:   #e2e8f0;
+  --gray-200:   #cbd5e1;
+  --gray-400:   #94a3b8;
+  --gray-500:   #64748b;
+  --gray-700:   #334155;
+  --gray-900:   #0f172a;
+  --ink:        #1e293b;
+  --green:      #166534;
+  --green-light:#dcfce7;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--off-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--blue-hover); }
+
+/* ── TOP STRIP ── */
+.topstrip {
+  background: var(--navy);
+  padding: 0.35rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+.topstrip a { color: #93c5fd; text-decoration: none; }
+.topstrip a:hover { color: #fff; }
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--navy);
+  padding: 1.5rem 2rem 0;
+  border-bottom: 3px solid var(--blue);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+.journal-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.journal-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 500;
+}
+.journal-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.journal-abbr {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+  letter-spacing: 0.05em;
+}
+.header-meta {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.9;
+  flex-shrink: 0;
+}
+.header-meta .current-vol {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+.header-meta a { color: #93c5fd; }
+
+/* ── NAV ── */
+.site-nav {
+  display: flex;
+  gap: 0;
+  margin-top: 0.25rem;
+  border-top: 1px solid #1e3a6e;
+}
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.65rem 1.1rem 0.65rem 0;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  border-top: 2px solid transparent;
+  margin-top: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  text-decoration: none;
+}
+.site-nav a:hover { color: #e2e8f0; border-top-color: #4f8ef0; }
+.site-nav a.active { color: #fff; border-top-color: var(--blue); }
+
+/* ── PAGE CONTAINER ── */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  flex: 1;
+  width: 100%;
+}
+
+/* ── SECTION LABELS ── */
+.eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* ── PAGE TITLES ── */
+.page-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.page-lead { color: var(--gray-500); max-width: 60ch; margin-bottom: 2rem; font-size: 0.95rem; }
+
+/* ── NOTICES ── */
+.notice {
+  border-radius: 4px;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.notice.info { background: var(--blue-light); border-left: 3px solid var(--blue); color: #1e3a6e; }
+.notice.warning { background: var(--amber-light); border-left: 3px solid var(--amber); color: #78350f; }
+.notice.success { background: var(--green-light); border-left: 3px solid var(--green); color: #14532d; }
+.notice-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+.notice a { color: inherit; font-weight: 600; text-decoration: underline; }
+
+/* ── ARTICLE LIST ── */
+.article-list { list-style: none; }
+.article-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--gray-100);
+  align-items: start;
+}
+.article-row:first-child { border-top: 1px solid var(--gray-100); }
+.article-title-link {
+  font-family: 'Fraunces', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.35;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.article-title-link:hover { color: var(--blue); text-decoration: none; }
+.article-authors { font-size: 0.78rem; color: var(--gray-500); }
+.article-pages { font-size: 0.75rem; color: var(--gray-400); white-space: nowrap; }
+.pill-links { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
+.pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-decoration: none !important;
+}
+.pill.pdf { background: var(--blue-light); color: var(--blue); }
+.pill.pdf:hover { background: var(--blue); color: #fff; }
+.pill.pdf-local { background: var(--green-light); color: var(--green); }
+.pill.pdf-local:hover { background: var(--green); color: #fff; }
+.pill.abstract { background: var(--gray-100); color: var(--gray-500); }
+.pill.abstract:hover { background: var(--gray-200); color: var(--ink); }
+
+/* ── ISSUE HEADER ── */
+.issue-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.issue-header-left {}
+.issue-vol {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.25rem;
+}
+.issue-title-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+.issue-subtitle-display { font-size: 0.85rem; color: #94a3b8; font-style: italic; }
+.issue-published { font-size: 0.75rem; color: #64748b; margin-top: 0.4rem; }
+.issue-header-right { text-align: right; flex-shrink: 0; }
+.issue-article-count {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+  display: block;
+}
+.issue-article-label { font-size: 0.7rem; color: #64748b; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── VOLUME BLOCKS (archives) ── */
+.volume-section { margin-bottom: 2.5rem; }
+.volume-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 0.75rem;
+}
+.volume-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.volume-tag.proc { background: var(--teal); }
+.volume-title-text {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+.volume-year-tag { margin-left: auto; font-size: 0.75rem; color: var(--gray-400); flex-shrink: 0; }
+
+/* ── SIDEBAR ── */
+.sidebar { display: flex; flex-direction: column; gap: 1rem; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.card-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.card p { font-size: 0.83rem; color: var(--gray-500); margin-bottom: 0.6rem; }
+.card ul { list-style: none; font-size: 0.83rem; }
+.card ul li { padding: 0.3rem 0; border-bottom: 1px solid var(--gray-100); color: var(--gray-500); }
+.card ul li:last-child { border-bottom: none; }
+.card ul li a { color: var(--blue); }
+
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.stat-box { background: var(--gray-50); border-radius: 4px; padding: 0.6rem 0.5rem; text-align: center; }
+.stat-val { display: block; font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+.stat-lbl { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none !important;
+  margin-top: 0.5rem;
+  transition: background 0.15s, color 0.15s;
+}
+.btn.primary { background: var(--blue); color: #fff !important; }
+.btn.primary:hover { background: var(--blue-hover); }
+.btn.secondary { background: var(--gray-50); color: var(--ink) !important; border: 1px solid var(--gray-200); }
+.btn.secondary:hover { background: var(--gray-100); }
+.btn.muted { background: var(--gray-500); color: #fff !important; }
+.btn.muted:hover { background: var(--gray-700); }
+
+/* ── TWO-COLUMN LAYOUT ── */
+.two-col { display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+.two-col.narrow { grid-template-columns: 1fr 260px; }
+
+/* ── FORMS ── */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 0.3rem;
+}
+.form-group label .req { color: var(--amber); }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37,99,176,0.12);
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-hint { font-size: 0.73rem; color: var(--gray-400); margin-top: 0.25rem; }
+
+.btn-add-author {
+  font-size: 0.78rem; color: var(--blue); background: none;
+  border: 1px dashed var(--blue); padding: 0.3rem 0.75rem;
+  border-radius: 4px; cursor: pointer; margin-top: 0.3rem;
+}
+.btn-add-author:hover { background: var(--blue-light); }
+.author-row { display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
+.author-row input { flex: 1; }
+.btn-rm { background: none; border: 1px solid var(--gray-200); border-radius: 4px; color: var(--gray-400); padding: 0.28rem 0.55rem; cursor: pointer; font-size: 0.8rem; flex-shrink: 0; }
+.btn-rm:hover { border-color: #ef4444; color: #ef4444; }
+
+.submit-btn {
+  background: var(--blue); color: #fff; border: none; cursor: pointer;
+  padding: 0.65rem 1.75rem; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 4px; transition: background 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+.submit-btn:hover { background: var(--blue-hover); }
+
+/* ── CODE OUTPUT ── */
+.code-output {
+  background: var(--gray-900);
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  font-family: 'Fira Mono', 'Courier New', monospace;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  border-radius: 6px;
+  overflow-x: auto;
+  max-height: 380px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+.copy-btn {
+  background: var(--gray-700); color: #fff; border: none;
+  cursor: pointer; padding: 0.35rem 0.85rem; font-size: 0.75rem;
+  font-weight: 600; border-radius: 4px; margin-top: 0.5rem;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.15s;
+}
+.copy-btn:hover { background: var(--navy); }
+.copy-flash { font-size: 0.75rem; color: var(--green); margin-left: 0.6rem; opacity: 0; transition: opacity 0.3s; }
+
+/* ── TABS ── */
+.tab-row { display: flex; border-bottom: 2px solid var(--gray-100); margin-bottom: 1.5rem; }
+.tab-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 0.55rem 1.1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.76rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--gray-500);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--navy);
+  color: #64748b;
+  padding: 2.5rem 2rem;
+  margin-top: auto;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+.footer-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 0.4rem;
+}
+.site-footer p, .site-footer li { font-size: 0.8rem; line-height: 1.7; }
+.site-footer ul { list-style: none; }
+.site-footer li { padding: 0.2rem 0; }
+.site-footer a { color: #64748b; }
+.site-footer a:hover { color: #93c5fd; text-decoration: none; }
+.footer-heading { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #334155; margin-bottom: 0.6rem; }
+.footer-copy {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid #1e293b;
+  font-size: 0.72rem;
+  color: #334155;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── CHECKLIST ── */
+.checklist { list-style: none; }
+.checklist li {
+  position: relative;
+  padding: 0.45rem 0 0.45rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+.checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--blue); }
+
+/* ── EDITOR CARDS ── */
+.editor-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.editor-card:first-of-type { border-top: 1px solid var(--gray-100); }
+.editor-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700;
+  color: #fff; flex-shrink: 0;
+}
+.editor-role-badge {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 0.1rem;
+}
+.editor-full-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--navy); }
+.editor-affiliation { font-size: 0.8rem; color: var(--gray-500); font-style: italic; margin-bottom: 0.3rem; }
+.editor-blurb { font-size: 0.83rem; color: var(--gray-500); }
+
+/* ── INVENTORY TABLE ── */
+.inv-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.inv-table th {
+  text-align: left; padding: 0.4rem 0.75rem;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gray-400);
+  border-bottom: 2px solid var(--gray-100);
+}
+.inv-table td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+.inv-table td:first-child { font-family: 'Fraunces', serif; font-size: 0.9rem; color: var(--navy); }
+.progress-bar { height: 5px; background: var(--gray-100); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; background: var(--blue); transition: width 0.3s; }
+.progress-fill.done { background: var(--green); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.site-header { animation: fadeIn 0.4s ease both; }
+.page-container { animation: fadeIn 0.4s 0.08s ease both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 780px) {
+  .two-col { grid-template-columns: 1fr; }
+  .header-top { flex-direction: column; align-items: flex-start; }
+  .header-meta { text-align: left; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .form-grid { grid-template-columns: 1fr; }
+  .issue-header { flex-direction: column; }
+}
+
+/* ── HIDDEN ── */
+.hidden { display: none !important; }
+
+  </style>
+</head>
+<body>
+
+<div id="hdr"></div>
+
+<div class="page-container">
+  <div class="two-col">
+    <main>
+      <span class="eyebrow">For Authors</span>
+      <h1 class="page-title">Submit a Manuscript</h1>
+      <p class="page-lead">
+        NAGJ accepts manuscripts on a rolling basis, year-round.
+        No submission fees. Authors retain copyright.
+      </p>
+
+      <div class="notice info">
+        <span class="notice-icon">ℹ</span>
+        <span>
+          To submit, email your manuscript to
+          <a href="mailto:james.quinlan@maine.edu">james.quinlan@maine.edu</a>.
+          LaTeX submissions using our template are preferred.
+        </span>
+      </div>
+
+      <section style="margin-bottom:2rem;">
+        <h2 style="font-family:'Fraunces',serif; font-size:1.25rem; color:var(--navy); margin-bottom:0.75rem;">Author Guidelines</h2>
+        <p style="color:var(--gray-700); margin-bottom:0.75rem;">
+          Manuscripts should be a maximum of <strong>3,000 words</strong>.
+          Use <a href="http://www.library.cornell.edu/newhelp/res_strategy/citing/apa.html" target="_blank">APA style</a> for citations.
+          Original figures, tables, and graphs should be embedded in the document —
+          do not use text boxes, footnotes, or endnotes.
+        </p>
+        <p style="color:var(--gray-700); margin-bottom:0.75rem;">
+          Submissions in <a href="https://github.com/jamesquinlan/nagj" target="_blank">LaTeX (.tex)</a> are preferred.
+          Microsoft Word or Plain Text are also accepted.
+          Overleaf users may start from the
+          <a href="https://www.overleaf.com/latex/templates/nagj/jjfqhddndkxp" target="_blank">official NAGJ template on Overleaf</a>.
+        </p>
+        <p style="color:var(--gray-700);">
+          No cover sheet is needed — author information is entered during registration.
+          <strong>No author identification should appear in the manuscript or its metadata.</strong>
+        </p>
+      </section>
+
+      <section style="margin-bottom:2rem;">
+        <h2 style="font-family:'Fraunces',serif; font-size:1.25rem; color:var(--navy); margin-bottom:0.75rem;">Submission Checklist</h2>
+        <ul class="checklist">
+          <li>Manuscript has not been previously published, nor is it under consideration elsewhere</li>
+          <li>File is in LaTeX (.tex), Microsoft Word, or Plain Text format</li>
+          <li>URLs provided for all references where available</li>
+          <li>Text is single-spaced, 12-point font; italics used for emphasis (not underline)</li>
+          <li>All figures and tables are embedded within the document (no text boxes)</li>
+          <li>No author identification in manuscript or document metadata (blind review)</li>
+          <li>Manuscript is no more than 3,000 words</li>
+          <li>APA citation style used throughout</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 style="font-family:'Fraunces',serif; font-size:1.25rem; color:var(--navy); margin-bottom:0.75rem;">Review Process</h2>
+        <p style="color:var(--gray-700); margin-bottom:0.75rem;">
+          All manuscripts undergo <strong>double-blind peer review</strong> by up to three external reviewers.
+          Reviewers and authors are anonymous to one another throughout the process.
+        </p>
+        <p style="color:var(--gray-700); margin-bottom:0.75rem;">
+          Decisions are categorized as <em>Accept</em>, <em>Revise &amp; Resubmit</em>, or <em>Reject</em>.
+          Revised manuscripts are reviewed by a new set of external reviewers.
+        </p>
+        <p style="color:var(--gray-700);">
+          <strong>Acceptance rate:</strong> 53%
+        </p>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-title">Templates</div>
+        <p>Start your submission with the official NAGJ LaTeX template.</p>
+        <a href="https://www.overleaf.com/latex/templates/nagj/jjfqhddndkxp" class="btn primary" target="_blank">Overleaf Template ↗</a>
+        <a href="https://github.com/jamesquinlan/nagj" class="btn secondary" target="_blank">GitHub (LaTeX source) ↗</a>
+      </div>
+      <div class="card">
+        <div class="card-title">Contact the Editor</div>
+        <p>Questions about the submission process or scope?</p>
+        <a href="mailto:james.quinlan@maine.edu" class="btn primary">Email the Editor</a>
+      </div>
+      <div class="card">
+        <div class="card-title">At a Glance</div>
+        <ul>
+          <li>Open to all researchers &amp; educators</li>
+          <li>K–16 mathematics education focus</li>
+          <li>No submission or processing fees</li>
+          <li>Authors retain copyright</li>
+          <li>Rolling submissions, year-round</li>
+          <li>Double-blind peer review</li>
+          <li>53% acceptance rate</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="ftr"></div>
+
+<script src="articles.js"></script>
+<script src="shared.js"></script>
+<script>
+  document.getElementById('hdr').innerHTML = renderHeader('submit');
+  document.getElementById('ftr').innerHTML = renderFooter();
+</script>
+</body>
+</html>
