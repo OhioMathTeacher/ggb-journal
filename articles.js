@@ -34,7 +34,7 @@ const NAGJ_DATA = {
           pages: "1–16",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/273/179",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/273",
-          localPdf: null  // set to "pdfs/v14n1-cerisola.pdf" once uploaded
+          localPdf: "pdfs/v14n1-cerisola.pdf"
         }
       ]
     },
@@ -53,7 +53,7 @@ const NAGJ_DATA = {
           pages: "1–11",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/265/174",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/265",
-          localPdf: null
+          localPdf: "pdfs/v13n1-campuzano.pdf"
         },
         {
           id: "216",
@@ -62,7 +62,7 @@ const NAGJ_DATA = {
           pages: "12–17",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/216/175",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/216",
-          localPdf: null
+          localPdf: "pdfs/v13n1-bortolossi.pdf"
         },
         {
           id: "229",
@@ -71,7 +71,7 @@ const NAGJ_DATA = {
           pages: "18–26",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/229/176",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/229",
-          localPdf: null
+          localPdf: "pdfs/v13n1-sousa.pdf"
         },
         {
           id: "220",
@@ -80,7 +80,7 @@ const NAGJ_DATA = {
           pages: "27–34",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/220/177",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/220",
-          localPdf: null
+          localPdf: "pdfs/v13n1-santiago.pdf"
         },
         {
           id: "271",
@@ -89,7 +89,7 @@ const NAGJ_DATA = {
           pages: "35–44",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/271/178",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/271",
-          localPdf: null
+          localPdf: "pdfs/v13n1-aguilera.pdf"
         }
       ]
     },
@@ -108,7 +108,7 @@ const NAGJ_DATA = {
           pages: "1–8",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/208/169",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/208",
-          localPdf: null
+          localPdf: "pdfs/v12n1-bortolossi.pdf"
         },
         {
           id: "210",
@@ -117,7 +117,7 @@ const NAGJ_DATA = {
           pages: "9–24",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/210/170",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/210",
-          localPdf: null
+          localPdf: "pdfs/v12n1-bu.pdf"
         },
         {
           id: "212",
@@ -126,7 +126,7 @@ const NAGJ_DATA = {
           pages: "25–31",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/212/171",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/212",
-          localPdf: null
+          localPdf: "pdfs/v12n1-cullen.pdf"
         },
         {
           id: "213",
@@ -135,7 +135,7 @@ const NAGJ_DATA = {
           pages: "32–41",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/213/172",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/213",
-          localPdf: null
+          localPdf: "pdfs/v12n1-kaufman.pdf"
         }
       ]
     },
@@ -154,7 +154,7 @@ const NAGJ_DATA = {
           pages: "1–14",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/197/159",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/197",
-          localPdf: null
+          localPdf: "pdfs/v11n1-campuzano.pdf"
         },
         {
           id: "198",
@@ -163,7 +163,7 @@ const NAGJ_DATA = {
           pages: "15–25",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/198/162",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/198",
-          localPdf: null
+          localPdf: "pdfs/v11n1-bu.pdf"
         },
         {
           id: "200",
@@ -172,7 +172,7 @@ const NAGJ_DATA = {
           pages: "26–34",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/200/165",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/200",
-          localPdf: null
+          localPdf: "pdfs/v11n1-glassmeyer.pdf"
         },
         {
           id: "199",
@@ -181,7 +181,7 @@ const NAGJ_DATA = {
           pages: "35–47",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/199/166",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/199",
-          localPdf: null
+          localPdf: "pdfs/v11n1-sergi.pdf"
         },
         {
           id: "205",
@@ -190,7 +190,7 @@ const NAGJ_DATA = {
           pages: "48–61",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/205/167",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/205",
-          localPdf: null
+          localPdf: "pdfs/v11n1-meagher.pdf"
         },
         {
           id: "206",
@@ -199,7 +199,7 @@ const NAGJ_DATA = {
           pages: "62–70",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/206/168",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/206",
-          localPdf: null
+          localPdf: "pdfs/v11n1-bastos.pdf"
         }
       ]
     },
@@ -218,7 +218,7 @@ const NAGJ_DATA = {
           pages: "1–13",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/188/154",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/188",
-          localPdf: null
+          localPdf: "pdfs/v10n1-campuzano.pdf"
         },
         {
           id: "192",
@@ -227,7 +227,7 @@ const NAGJ_DATA = {
           pages: "14–19",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/192/155",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/192",
-          localPdf: null
+          localPdf: "pdfs/v10n1-stupel.pdf"
         },
         {
           id: "184",
@@ -236,7 +236,7 @@ const NAGJ_DATA = {
           pages: "20–28",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/184/156",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/184",
-          localPdf: null
+          localPdf: "pdfs/v10n1-contreras.pdf"
         },
         {
           id: "189",
@@ -245,7 +245,7 @@ const NAGJ_DATA = {
           pages: "29–44",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/189/157",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/189",
-          localPdf: null
+          localPdf: "pdfs/v10n1-garcia.pdf"
         },
         {
           id: "193",
@@ -254,7 +254,7 @@ const NAGJ_DATA = {
           pages: "45–46",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/193/158",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/193",
-          localPdf: null
+          localPdf: "pdfs/v10n1-bortolossi.pdf"
         }
       ]
     },
@@ -273,7 +273,7 @@ const NAGJ_DATA = {
           pages: "1–7",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/177/144",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/177",
-          localPdf: null
+          localPdf: "pdfs/v9n1-nhiayi.pdf"
         },
         {
           id: "180",
@@ -282,7 +282,7 @@ const NAGJ_DATA = {
           pages: "8–10",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/180/145",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/180",
-          localPdf: null
+          localPdf: "pdfs/v9n1-edwards.pdf"
         },
         {
           id: "183",
@@ -291,7 +291,7 @@ const NAGJ_DATA = {
           pages: "11–21",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/183/146",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/183",
-          localPdf: null
+          localPdf: "pdfs/v9n1-bu.pdf"
         },
         {
           id: "179",
@@ -300,7 +300,7 @@ const NAGJ_DATA = {
           pages: "22–24",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/179/149",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/179",
-          localPdf: null
+          localPdf: "pdfs/v9n1-segal.pdf"
         },
         {
           id: "181",
@@ -309,7 +309,7 @@ const NAGJ_DATA = {
           pages: "31–35",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/181/152",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/181",
-          localPdf: null
+          localPdf: "pdfs/v9n1-campuzano.pdf"
         },
         {
           id: "178",
@@ -318,7 +318,7 @@ const NAGJ_DATA = {
           pages: "36–40",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/178/153",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/178",
-          localPdf: null
+          localPdf: "pdfs/v9n1-stupel.pdf"
         }
       ]
     },
@@ -337,7 +337,7 @@ const NAGJ_DATA = {
           pages: "1–14",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/152/135",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/152",
-          localPdf: null
+          localPdf: "pdfs/v8n1-ozgunkoca.pdf"
         },
         {
           id: "157",
@@ -346,7 +346,7 @@ const NAGJ_DATA = {
           pages: "15–34",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/157/136",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/157",
-          localPdf: null
+          localPdf: "pdfs/v8n1-lazar.pdf"
         },
         {
           id: "170",
@@ -355,7 +355,7 @@ const NAGJ_DATA = {
           pages: "35–38",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/170/137",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/170",
-          localPdf: null
+          localPdf: "pdfs/v8n1-oxman.pdf"
         },
         {
           id: "171",
@@ -364,7 +364,7 @@ const NAGJ_DATA = {
           pages: "39–45",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/171/138",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/171",
-          localPdf: null
+          localPdf: "pdfs/v8n1-ableitinger.pdf"
         },
         {
           id: "175",
@@ -373,7 +373,7 @@ const NAGJ_DATA = {
           pages: "46–57",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/175/139",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/175",
-          localPdf: null
+          localPdf: "pdfs/v8n1-cerisola.pdf"
         },
         {
           id: "172",
@@ -382,7 +382,7 @@ const NAGJ_DATA = {
           pages: "58–65",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/172/140",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/172",
-          localPdf: null
+          localPdf: "pdfs/v8n1-xie.pdf"
         },
         {
           id: "176",
@@ -391,7 +391,7 @@ const NAGJ_DATA = {
           pages: "66–68",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/176/141",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/176",
-          localPdf: null
+          localPdf: "pdfs/v8n1-jahangiri.pdf"
         },
         {
           id: "161",
@@ -400,7 +400,7 @@ const NAGJ_DATA = {
           pages: "69–93",
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/161/142",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/161",
-          localPdf: null
+          localPdf: "pdfs/v8n1-mazlan.pdf"
         }
       ]
     },
@@ -419,7 +419,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/126/119",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/126",
-          localPdf: null
+          localPdf: "pdfs/v7n1-soto.pdf"
         },
         {
           id: "125",
@@ -428,7 +428,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/125/118",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/125",
-          localPdf: null
+          localPdf: "pdfs/v7n1-phanyamada.pdf"
         },
         {
           id: "145",
@@ -437,7 +437,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/145/130",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/145",
-          localPdf: null
+          localPdf: "pdfs/v7n1-caglayan.pdf"
         },
         {
           id: "144",
@@ -446,7 +446,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/144/134",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/144",
-          localPdf: null
+          localPdf: "pdfs/v7n1-williams.pdf"
         },
         {
           id: "148",
@@ -455,7 +455,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/148/131",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/148",
-          localPdf: null
+          localPdf: "pdfs/v7n1-campe.pdf"
         },
         {
           id: "147",
@@ -464,7 +464,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/147/133",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/147",
-          localPdf: null
+          localPdf: "pdfs/v7n1-soots.pdf"
         },
         {
           id: "149",
@@ -473,7 +473,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/149/132",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/149",
-          localPdf: null
+          localPdf: "pdfs/v7n1-wassie.pdf"
         }
       ]
     },
@@ -492,7 +492,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/89/99",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/89",
-          localPdf: null
+          localPdf: "pdfs/v6n1-flores.pdf"
         },
         {
           id: "108",
@@ -501,7 +501,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/108/113",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/108",
-          localPdf: null
+          localPdf: "pdfs/v6n1-odom.pdf"
         },
         {
           id: "92",
@@ -510,7 +510,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/92/114",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/92",
-          localPdf: null
+          localPdf: "pdfs/v6n1-cooper.pdf"
         },
         {
           id: "124",
@@ -519,7 +519,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/124/115",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/124",
-          localPdf: null
+          localPdf: "pdfs/v6n1-haciomeroglu.pdf"
         },
         {
           id: "137",
@@ -528,7 +528,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/137/116",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/137",
-          localPdf: null
+          localPdf: "pdfs/v6n1-ableitinger.pdf"
         }
       ]
     },
@@ -549,7 +549,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/105/101",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/105",
-          localPdf: null
+          localPdf: "pdfs/v5n2-manthey.pdf"
         },
         {
           id: "106",
@@ -558,7 +558,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/106/102",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/106",
-          localPdf: null
+          localPdf: "pdfs/v5n2-navetta.pdf"
         },
         {
           id: "104",
@@ -567,7 +567,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/104/103",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/104",
-          localPdf: null
+          localPdf: "pdfs/v5n2-pastore.pdf"
         },
         {
           id: "103",
@@ -576,7 +576,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/103/104",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/103",
-          localPdf: null
+          localPdf: "pdfs/v5n2-quinlan.pdf"
         },
         {
           id: "102",
@@ -585,7 +585,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/102/105",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/102",
-          localPdf: null
+          localPdf: "pdfs/v5n2-fisher.pdf"
         },
         {
           id: "107",
@@ -594,7 +594,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/107/106",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/107",
-          localPdf: null
+          localPdf: "pdfs/v5n2-states.pdf"
         }
       ]
     },
@@ -613,7 +613,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/67/81",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/67",
-          localPdf: null
+          localPdf: "pdfs/v5n1-flores.pdf"
         },
         {
           id: "73",
@@ -622,7 +622,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/73/100",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/73",
-          localPdf: null
+          localPdf: "pdfs/v5n1-caniglia.pdf"
         },
         {
           id: "86",
@@ -631,7 +631,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/86/97",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/86",
-          localPdf: null
+          localPdf: "pdfs/v5n1-stupel.pdf"
         },
         {
           id: "75",
@@ -640,7 +640,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/75/89",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/75",
-          localPdf: null
+          localPdf: "pdfs/v5n1-tsareva.pdf"
         },
         {
           id: "77",
@@ -649,7 +649,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/77/90",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/77",
-          localPdf: null
+          localPdf: "pdfs/v5n1-hruby.pdf"
         },
         {
           id: "87",
@@ -658,7 +658,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/87/98",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/87",
-          localPdf: null
+          localPdf: "pdfs/v5n1-bu.pdf"
         }
       ]
     },
@@ -679,7 +679,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/80/66",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/80",
-          localPdf: null
+          localPdf: "pdfs/v4n2-edwards.pdf"
         },
         {
           id: "82",
@@ -688,7 +688,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/82/67",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/82",
-          localPdf: null
+          localPdf: "pdfs/v4n2-dombi.pdf"
         },
         {
           id: "81",
@@ -697,7 +697,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/81/68",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/81",
-          localPdf: null
+          localPdf: "pdfs/v4n2-hoffman.pdf"
         },
         {
           id: "79",
@@ -706,7 +706,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/79/69",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/79",
-          localPdf: null
+          localPdf: "pdfs/v4n2-quinlan.pdf"
         }
       ]
     },
@@ -725,7 +725,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/66/53",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/66",
-          localPdf: null
+          localPdf: "pdfs/v4n1-flores.pdf"
         },
         {
           id: "65",
@@ -734,7 +734,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/65/54",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/65",
-          localPdf: null
+          localPdf: "pdfs/v4n1-hecke.pdf"
         },
         {
           id: "70",
@@ -743,7 +743,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/70/56",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/70",
-          localPdf: null
+          localPdf: "pdfs/v4n1-nabboutcheiban.pdf"
         }
       ]
     },
@@ -762,7 +762,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/46/43",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/46",
-          localPdf: null
+          localPdf: "pdfs/v3n1-bolognese.pdf"
         },
         {
           id: "48",
@@ -771,7 +771,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/48/45",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/48",
-          localPdf: null
+          localPdf: "pdfs/v3n1-martinezcruz.pdf"
         },
         {
           id: "63",
@@ -780,7 +780,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/63/46",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/63",
-          localPdf: null
+          localPdf: "pdfs/v3n1-foos.pdf"
         },
         {
           id: "60",
@@ -789,7 +789,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/60/48",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/60",
-          localPdf: null
+          localPdf: "pdfs/v3n1-noyes.pdf"
         },
         {
           id: "54",
@@ -798,7 +798,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/54/50",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/54",
-          localPdf: null
+          localPdf: "pdfs/v3n1-cooper.pdf"
         },
         {
           id: "50",
@@ -807,7 +807,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/50/51",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/50",
-          localPdf: null
+          localPdf: "pdfs/v3n1-martinezcruz-1.pdf"
         },
         {
           id: "58",
@@ -816,7 +816,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/58/52",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/58",
-          localPdf: null
+          localPdf: "pdfs/v3n1-callon.pdf"
         }
       ]
     },
@@ -835,7 +835,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/18/21",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/18",
-          localPdf: null
+          localPdf: "pdfs/v2n1-may.pdf"
         },
         {
           id: "25",
@@ -844,7 +844,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/25/30",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/25",
-          localPdf: null
+          localPdf: "pdfs/v2n1-miller.pdf"
         },
         {
           id: "37",
@@ -853,7 +853,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/37/38",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/37",
-          localPdf: null
+          localPdf: "pdfs/v2n1-criscuolo.pdf"
         },
         {
           id: "47",
@@ -862,7 +862,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/47/39",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/47",
-          localPdf: null
+          localPdf: "pdfs/v2n1-quinlan.pdf"
         },
         {
           id: "23",
@@ -871,7 +871,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/23/22",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/23",
-          localPdf: null
+          localPdf: "pdfs/v2n1-samkova.pdf"
         },
         {
           id: "42",
@@ -880,7 +880,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/42/28",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/42",
-          localPdf: null
+          localPdf: "pdfs/v2n1-chan.pdf"
         },
         {
           id: "38",
@@ -889,7 +889,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/38/33",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/38",
-          localPdf: null
+          localPdf: "pdfs/v2n1-xistouri.pdf"
         },
         {
           id: "40",
@@ -898,7 +898,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/40/36",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/40",
-          localPdf: null
+          localPdf: "pdfs/v2n1-hasek.pdf"
         }
       ]
     },
@@ -917,7 +917,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/4/19",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/4",
-          localPdf: null
+          localPdf: "pdfs/v1n1-guncaga.pdf"
         },
         {
           id: "21",
@@ -926,7 +926,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/21/20",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/21",
-          localPdf: null
+          localPdf: "pdfs/v1n1-nguyen.pdf"
         },
         {
           id: "6",
@@ -935,7 +935,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/6/13",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/6",
-          localPdf: null
+          localPdf: "pdfs/v1n1-vanicek.pdf"
         },
         {
           id: "14",
@@ -944,7 +944,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/14/14",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/14",
-          localPdf: null
+          localPdf: "pdfs/v1n1-chaurasia.pdf"
         },
         {
           id: "12",
@@ -953,7 +953,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/12/15",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/12",
-          localPdf: null
+          localPdf: "pdfs/v1n1-hasek.pdf"
         },
         {
           id: "3",
@@ -962,7 +962,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/3/11",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/3",
-          localPdf: null
+          localPdf: "pdfs/v1n1-gittinger.pdf"
         },
         {
           id: "16",
@@ -971,7 +971,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/16/9",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/16",
-          localPdf: null
+          localPdf: "pdfs/v1n1-ozgunkoca.pdf"
         },
         {
           id: "15",
@@ -980,7 +980,7 @@ const NAGJ_DATA = {
           pages: null,
           pdfUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/15/18",
           abstractUrl: "https://mathed.miamioh.edu/index.php/ggbj/article/view/15",
-          localPdf: null
+          localPdf: "pdfs/v1n1-saraswati.pdf"
         }
       ]
     }
