@@ -1,6 +1,6 @@
 // shared.js
 
-function renderHeader(activePage) {
+function renderHeader(activePage, base = '') {
   const j = NAGJ_DATA.journal;
   const cur = NAGJ_DATA.issues[0];
   const nav = [
@@ -10,19 +10,19 @@ function renderHeader(activePage) {
     { id: 'team',     label: 'Editorial Team',href: 'team.html' },
     { id: 'contact',  label: 'Contact',       href: 'contact.html' },
     { id: 'admin',    label: 'Admin',         href: 'admin.html' },
-  ].map(p => `<a href="${p.href}" class="${p.id === activePage ? 'active' : ''}">${p.label}</a>`).join('');
+  ].map(p => `<a href="${base}${p.href}" class="${p.id === activePage ? 'active' : ''}">${p.label}</a>`).join('');
 
   return `
 <div class="topstrip">
   <span>Open Access &nbsp;·&nbsp; Peer Reviewed &nbsp;·&nbsp; No Submission Fees &nbsp;·&nbsp; ISSN ${j.issn}</span>
-  <a href="contact.html">✉ Contact the Editor</a>
+  <a href="${base}contact.html">✉ Contact the Editor</a>
 </div>
 <header class="site-header">
   <div class="header-inner">
     <div class="header-top">
       <div class="journal-wordmark">
         <span class="journal-label">Mathematics Education &amp; Technology</span>
-        <a href="index.html" style="text-decoration:none;">
+        <a href="${base}index.html" style="text-decoration:none;">
           <h1 class="journal-name">North American GeoGebra Journal</h1>
         </a>
         <span class="journal-abbr">NAGJ &nbsp;·&nbsp; ${j.tagline}</span>
@@ -39,7 +39,7 @@ function renderHeader(activePage) {
 </header>`;
 }
 
-function renderFooter() {
+function renderFooter(base = '') {
   const j = NAGJ_DATA.journal;
   return `
 <footer class="site-footer">
@@ -51,12 +51,12 @@ function renderFooter() {
     <div>
       <p class="footer-heading">Navigate</p>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="archives.html">Archives</a></li>
-        <li><a href="submit.html">Submit a Manuscript</a></li>
-        <li><a href="team.html">Editorial Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="${base}index.html">Home</a></li>
+        <li><a href="${base}archives.html">Archives</a></li>
+        <li><a href="${base}submit.html">Submit a Manuscript</a></li>
+        <li><a href="${base}team.html">Editorial Team</a></li>
+        <li><a href="${base}contact.html">Contact</a></li>
+        <li><a href="${base}admin.html">Admin</a></li>
       </ul>
     </div>
     <div>
@@ -75,21 +75,28 @@ function renderFooter() {
 </footer>`;
 }
 
-function articlePills(a) {
+function articlePills(a, base = '') {
+  // Prefer the local article page (with abstract + metadata); fall back to legacy OJS.
+  const details = a.articlePage
+    ? `<a href="${base}${a.articlePage}" class="pill abstract">Details</a>`
+    : `<a href="${a.abstractUrl}" target="_blank" class="pill abstract">Abstract</a>`;
   const pdf = a.localPdf
-    ? `<a href="${a.localPdf}" class="pill pdf-local">PDF</a>`
+    ? `<a href="${base}${a.localPdf}" class="pill pdf-local">PDF</a>`
     : `<a href="${a.pdfUrl}" target="_blank" class="pill pdf">PDF</a>`;
-  return `${pdf}<a href="${a.abstractUrl}" target="_blank" class="pill abstract">Abstract</a>`;
+  return `${pdf}${details}`;
 }
 
-function renderArticleRow(a) {
+function renderArticleRow(a, base = '') {
   const pages = a.pages ? `<span class="article-pages">pp. ${a.pages}</span>` : '';
+  const titleLink = a.articlePage
+    ? `<a href="${base}${a.articlePage}" class="article-title-link">${a.title}</a>`
+    : `<a href="${a.abstractUrl}" target="_blank" class="article-title-link">${a.title}</a>`;
   return `
 <li class="article-row" data-search="${(a.title + ' ' + a.authors.join(' ')).toLowerCase()}">
   <div>
-    <a href="${a.abstractUrl}" target="_blank" class="article-title-link">${a.title}</a>
+    ${titleLink}
     <div class="article-authors">${a.authors.join('; ')}</div>
-    <div class="pill-links">${articlePills(a)}</div>
+    <div class="pill-links">${articlePills(a, base)}</div>
   </div>
   <div>${pages}</div>
 </li>`;
