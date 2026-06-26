@@ -30,8 +30,7 @@ function renderHeader(activePage, base = '') {
       <div class="header-meta">
         <span class="current-vol">Current Issue</span>
         Vol. ${cur.volume}, No. ${cur.number} (${cur.year})<br>
-        Published ${cur.published}<br>
-        <a href="${j.legacyUrl}/issue/current" target="_blank">Legacy site ↗</a>
+        Published ${cur.published}
       </div>
     </div>
     <nav class="site-nav">${nav}</nav>
@@ -62,8 +61,7 @@ function renderFooter(base = '') {
     <div>
       <p class="footer-heading">Contact</p>
       <ul>
-        <li><a href="contact.html">Contact the Editor</a></li>
-        <li><a href="${j.legacyUrl}" target="_blank">Legacy OJS Site ↗</a></li>
+        <li><a href="${base}contact.html">Contact the Editor</a></li>
         <li><a href="https://pages.github.com" target="_blank">Hosted on GitHub Pages</a></li>
       </ul>
     </div>
