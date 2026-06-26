@@ -73,7 +73,8 @@ function renderFooter(base = '') {
 </footer>`;
 }
 
-function articlePills(a, base = '') {
+function articlePills(a, base) {
+  base = typeof base === 'string' ? base : ''; // guard against Array.map passing the index
   // Prefer the local article page (with abstract + metadata); fall back to legacy OJS.
   const details = a.articlePage
     ? `<a href="${base}${a.articlePage}" class="pill abstract">Details</a>`
@@ -84,7 +85,8 @@ function articlePills(a, base = '') {
   return `${pdf}${details}`;
 }
 
-function renderArticleRow(a, base = '') {
+function renderArticleRow(a, base) {
+  base = typeof base === 'string' ? base : ''; // guard against Array.map passing the index
   const pages = a.pages ? `<span class="article-pages">pp. ${a.pages}</span>` : '';
   const titleLink = a.articlePage
     ? `<a href="${base}${a.articlePage}" class="article-title-link">${a.title}</a>`
